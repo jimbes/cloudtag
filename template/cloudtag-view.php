@@ -107,26 +107,61 @@
     #cloudtag .tag{
         position: absolute;
         line-height: 100%;
-        font-family: Roboto;
     }
 
-    #cloudtag .tag.color-1{
+    #cloudtag .tag.blue.color-1{
         color: #78CEFC;
     }
-    #cloudtag .tag.color-2{
+    #cloudtag .tag.blue.color-2{
         color: #15A9F7;
     }
-    #cloudtag .tag.color-3{
+    #cloudtag .tag.blue.color-3{
         color: #0187EC;
     }
-    #cloudtag .tag.color-4{
+    #cloudtag .tag.blue.color-4{
         color: #026EC0;
     }
-    #cloudtag .tag.color-5{
+    #cloudtag .tag.blue.color-5{
         color: #015A9D;
     }
-    #cloudtag .tag.color-6{
+    #cloudtag .tag.blue.color-6{
         color: #003054;
+    }
+    #cloudtag .tag.red.color-1{
+        color: #fc7878;
+    }
+    #cloudtag .tag.red.color-2{
+        color: #f71515;
+    }
+    #cloudtag .tag.red.color-3{
+        color: #ec0101;
+    }
+    #cloudtag .tag.red.color-4{
+        color: #c00202;
+    }
+    #cloudtag .tag.red.color-5{
+        color: #9d0101;
+    }
+    #cloudtag .tag.red.color-6{
+        color: #540000;
+    }
+    #cloudtag .tag.green.color-1{
+        color: #a4fc78;
+    }
+    #cloudtag .tag.green.color-2{
+        color: #6ff715;
+    }
+    #cloudtag .tag.green.color-3{
+        color: #44ec01;
+    }
+    #cloudtag .tag.green.color-4{
+        color: #48c002;
+    }
+    #cloudtag .tag.green.color-5{
+        color: #529d01;
+    }
+    #cloudtag .tag.green.color-6{
+        color: #125400;
     }
 
     #cloudtag .tag.s-1{
@@ -147,8 +182,47 @@
     #cloudtag .tag.s-6{
         font-size: 320%;
     }
+
+    #arrayCloud{
+        background-color: #1A3147;
+        padding: 1rem;
+    }
+    #arrayCloud h3,#arrayCloud hr{
+        color: white;
+    }
+    #arrayCloud .categories{
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 1200px;
+    }
+    #arrayCloud .categories .category{
+        background-color: white;
+        color: black;
+        flex: 1 auto;
+        width: 30%;
+        margin: 1%;
+        box-sizing: border-box;
+        padding: 0.5rem;
+
+    }
+    #arrayCloud .categories .category a{
+        display: block;
+    }
 </style>
 
+<div id="cloudController">
+    <select class="fontCloud">
+        <option>Choisir une police</option>
+        <option value="Roboto">Roboto</option>
+        <option value="Arial">Arial</option>
+    </select>
+    <select class="colorCloud">
+        <option>Choisir une teinte</option>
+        <option value="blue">Bleu</option>
+        <option value="red">Rouge</option>
+        <option value="green">Vert</option>
+    </select>
+</div>
 <div id="cloudtag">
 
     <?php
@@ -180,4 +254,29 @@
         }
     ?>
 
+</div>
+<div id="arrayCloud">
+    <h3>Recherche Google par mots-clés</h3>
+    <hr>
+    <div class="categories">
+    <?php
+    $arrayCategory = array();
+    foreach ($liste as $item){
+        if($item["tableau"] !=0) {
+	        if ( ! isset( $arrayCategory[ $item["cat"] ] ) ) {
+		        $arrayCategory[ $item["cat"] ] = array();
+	        }
+	        array_push( $arrayCategory[ $item["cat"] ], $item );
+        }
+    }
+    foreach ($arrayCategory as $row => $cat){
+	    echo "<div class='category n-".$row."'>";
+	    foreach ($cat as $item){
+	        echo "<a>".$item["name"]."</a>";
+        }
+	    echo "</div>";
+    }
+
+    ?>
+    </div>
 </div>

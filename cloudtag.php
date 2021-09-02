@@ -14,3 +14,9 @@ function cloudtagConstruct( $atts, $content, $shortcode_tag ){
 	return ob_get_clean();
 }
 add_shortcode( 'cloudtag', 'cloudtagConstruct' );
+/* Custom script with jQuery as a dependency, enqueued in the footer */
+add_action('wp_enqueue_scripts', 'cloudtag_enqueue_custom_js');
+function cloudtag_enqueue_custom_js() {
+	wp_enqueue_script('cloudtag', plugins_url("cloudtag") . '/assets/js/custom.js',
+		array('jquery'), false, true);
+}
