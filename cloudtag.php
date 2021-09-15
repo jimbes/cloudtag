@@ -3,7 +3,7 @@
 /*
 Plugin Name: Cloud Tag
 Description: Have cloud base on word and weight
-Version: 1.0.0
+Version: 1.0.1
 Author: Jimmy Besse
 Text Domain: Jimmy Besse
 */
@@ -20,3 +20,5 @@ function cloudtag_enqueue_custom_js() {
 	wp_enqueue_script('cloudtag', plugins_url("cloudtag") . '/assets/js/custom.js',
 		array('jquery'), false, true);
 }
+wp_register_style('cssCloudTag', plugin_dir_url( __FILE__ ) . 'assets/css/style.css');
+wp_enqueue_style('cssCloudTag');
