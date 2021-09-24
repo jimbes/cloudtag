@@ -1,9 +1,10 @@
-var font = ["Hina+Mincho", "Indie+Flower", "Knewave", "Marck+Script", "Playfair+Display"];
+var font = ["Hina+Mincho", "Indie+Flower", "Knewave", "Marck+Script", "Playfair+Display", "Scheherazade"];
 var indexFont = 0;
 
 jQuery("body").ready(function(){
     jQuery('head').append('<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">');
     jQuery("#cloudtag .tag").css({"font-family":'Roboto'});
+    jQuery('.right-categorie .block-all').scrollTop(jQuery('.right-categorie .block-all')[0].scrollHeight)
 });
 
 jQuery("#cloudController").on("click", "button.fontCloud, button.colorCloud",function(){

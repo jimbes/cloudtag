@@ -1433,8 +1433,8 @@ $listWord = array(
         <h3>Nuages</h3>
     </div>
     <div id="cloudController">
-        <button class="fontCloud">Changer la police</button>
-        <button class="colorCloud">Changer la couleur</button>
+        <button class="fontCloud">Changer la typographie</button>
+        <button class="colorCloud">Changer la teinte</button>
     </div>
     <div id="cloudtag">
 

@@ -82,7 +82,7 @@
 }
 
 #arrayCloud {
-    background-color: #1A3147;
+    background-color: rgba(0,43,84,0.8);
     padding: 1.8rem;
 }
 
@@ -132,7 +132,7 @@
     box-sizing: border-box;
     padding: 0.5rem;
     overflow-y: auto;
-    z-index: 10;
+    z-index: 5;
     overflow-x: hidden;
 }
 
@@ -173,6 +173,8 @@
     padding: 0.3rem 1rem;
     width: 49%;
     cursor: pointer;
+    height: 35px;
+    line-height: 30px;
 }
 @media (max-width: 768px) {
     #cloudtag{
@@ -183,8 +185,16 @@
     #arrayCloud .categories .left-categorie,
     #arrayCloud .categories .right-categorie{
         width: 100%;
+        margin: 0;
+        height: 280px;
+    }
+    #arrayCloud .categories .block-all{
+        height: 90%;
     }
     #arrayCloud .categories {
         max-height: 800px;
+    }
+    #arrayCloud .categories .backgroundColor{
+        display: none;
     }
 }
