@@ -83,11 +83,20 @@
 
 #arrayCloud {
     background-color: #1A3147;
-    padding: 1rem;
+    padding: 1.8rem;
 }
 
+#arrayCloud h3{
+    font-weight: bold;
+    margin: 0;
+    font-size: 16px;
+}
+#arrayCloud hr {
+    margin: 0.5rem 0;
+}
 #arrayCloud h3, #arrayCloud hr {
     color: white;
+
 }
 
 #arrayCloud .categories {
@@ -98,7 +107,7 @@
 }
 #arrayCloud .categories .left-categorie,
 #arrayCloud .categories .right-categorie{
-    width: 47%;
+    width: 46%;
     height: 350px;
     display: flex;
     align-items: center;
@@ -113,6 +122,7 @@
     position: absolute;
     left: 50%;
     z-index: 1;
+    border: none;
 }
 #arrayCloud .categories .block-all {
     background-color: white;
@@ -129,13 +139,16 @@
 #arrayCloud .categories .block-all .category{
     margin: 1rem 0;
 }
-#arrayCloud .categories .block-all .category p {
+#arrayCloud .categories .block-all .category a {
     text-align:center;
     margin-bottom: 0;
     line-height: 1.4rem;
     font-size: 1rem;
+    display: block;
+    color: black;
+    cursor: pointer;
 }
-#arrayCloud .categories .block-all .category p .space {
+#arrayCloud .categories .block-all .category a .space {
     height: 1rem;
     display: block;
 }
@@ -159,11 +172,19 @@
     color: white;
     padding: 0.3rem 1rem;
     width: 49%;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
     #cloudtag{
         height: 190px;
         font-size: 0.45rem;
         margin-top: 2rem;
+    }
+    #arrayCloud .categories .left-categorie,
+    #arrayCloud .categories .right-categorie{
+        width: 100%;
+    }
+    #arrayCloud .categories {
+        max-height: 800px;
     }
 }

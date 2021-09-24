@@ -1,10 +1,15 @@
-var font = ["Roboto", "Glory"];
+var font = ["Hina+Mincho", "Indie+Flower", "Knewave", "Marck+Script", "Playfair+Display"];
 var indexFont = 0;
+
+jQuery("body").ready(function(){
+    jQuery('head').append('<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">');
+    jQuery("#cloudtag .tag").css({"font-family":'Roboto'});
+});
 
 jQuery("#cloudController").on("click", "button.fontCloud, button.colorCloud",function(){
     if (jQuery(this).hasClass("fontCloud")) {
-        jQuery('head').append('<link href="https://fonts.googleapis.com/css2?family='+font[indexFont]+':ital@1&display=swap" rel="stylesheet">');
-        jQuery("#cloudtag .tag").css({"font-family":font[indexFont]});
+        jQuery('head').append('<link href="https://fonts.googleapis.com/css2?family='+font[indexFont]+'&display=swap" rel="stylesheet">');
+        jQuery("#cloudtag .tag").css({"font-family":font[indexFont].replaceAll("+"," ")});
         indexFont += 1 ;
         if(indexFont >= font.length){
             indexFont = 0;
