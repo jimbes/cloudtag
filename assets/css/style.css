@@ -173,7 +173,7 @@
     padding: 0.3rem 1rem;
     width: 49%;
     cursor: pointer;
-    height: 35px;
+    height: auto;
     line-height: 30px;
 }
 @media (max-width: 768px) {
