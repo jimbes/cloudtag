@@ -1433,8 +1433,8 @@ $listWord = array(
         <h3>Nuages</h3>
     </div>
     <div id="cloudController">
-        <button class="fontCloud">Changer la typographie</button>
-        <button class="colorCloud">Changer la teinte</button>
+        <button class="fontCloud">Typographies</button>
+        <button class="colorCloud">Évoluer Teintes</button>
     </div>
     <div id="cloudtag">
 
@@ -1501,12 +1501,15 @@ $listWord = array(
             <div class="left-categorie">
                 <hr class="backgroundColor"/>
                 <div class="block-all">
-                    <?php foreach ($listWord as $cat){
+                    <?php foreach ($listWord as $row => $cat){
 	                    echo "<div class='category'>";
                         foreach ($cat as $word){
                             echo "<a href='https://www.google.fr/search?q=".strip_tags($word)."' target='_blank'>".$word."</a>";
                         }
-                        echo "</div><hr/>";
+                        echo "</div>";
+                        if($row +1 > count($listWord)){
+                            echo "<hr/>";
+                        }
                     } ?>
 
                 </div>
@@ -1514,12 +1517,16 @@ $listWord = array(
             <div class="right-categorie">
                 <hr class="backgroundColor"/>
                 <div class="block-all">
-                    <?php foreach ($listWord as $cat){
+                    <?php foreach ($listWord as $row => $cat){
 	                    echo "<div class='category'>";
                         foreach ($cat as $word){
 	                        echo "<a href='https://www.google.fr/search?q=".strip_tags($word)."' target='_blank'>".$word."</a>";
                         }
-                        echo "</div><hr/>";
+                        echo "</div>";
+
+	                    if($row +1 > count($listWord)){
+		                    echo "<hr/>";
+	                    }
                     } ?>
 
                 </div>

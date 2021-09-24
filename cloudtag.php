@@ -3,7 +3,7 @@
 /*
 Plugin Name: Cloud Tag
 Description: Have cloud base on word and weight
-Version: 1.0.7
+Version: 1.0.11
 Author: Jimmy Besse
 Text Domain: Jimmy Besse
 */

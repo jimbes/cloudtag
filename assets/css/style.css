@@ -167,14 +167,14 @@
 }
 #cloudController button.fontCloud,
 #cloudController button.colorCloud{
-    background-color: #003054;
+    background-color: rgba(0,43,84,0.8);
     border: none;
     color: white;
-    padding: 0.3rem 1rem;
+    padding: 0.3rem 0.5rem;
     width: 49%;
     cursor: pointer;
-    height: auto;
-    line-height: 30px;
+    align-items: stretch;
+    margin: 0;
 }
 @media (max-width: 768px) {
     #cloudtag{
