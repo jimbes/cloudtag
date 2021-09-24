@@ -1507,7 +1507,7 @@ $listWord = array(
                             echo "<a href='https://www.google.fr/search?q=".strip_tags($word)."' target='_blank'>".$word."</a>";
                         }
                         echo "</div>";
-                        if($row +1 > count($listWord)){
+                        if($row +1 < count($listWord)){
                             echo "<hr/>";
                         }
                     } ?>
@@ -1524,7 +1524,7 @@ $listWord = array(
                         }
                         echo "</div>";
 
-	                    if($row +1 > count($listWord)){
+	                    if($row +1 < count($listWord)){
 		                    echo "<hr/>";
 	                    }
                     } ?>
