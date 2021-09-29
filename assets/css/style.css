@@ -82,7 +82,7 @@
 }
 
 #arrayCloud {
-    background-color: rgba(0,43,84,0.8);
+    background-color: #1A3147;
     padding: 1.8rem;
 }
 
@@ -167,7 +167,7 @@
 }
 #cloudController button.fontCloud,
 #cloudController button.colorCloud{
-    background-color: rgba(0,43,84,0.8);
+    background-color: #1A3147;
     border: none;
     color: white;
     padding: 0.3rem 0.5rem;

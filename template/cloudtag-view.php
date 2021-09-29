@@ -1422,7 +1422,7 @@ $listWord = array(
 		"Équilibre",
 		"Sport",
 		"Artiste",
-		"Équilibre"
+		"Équilibre<i class='space'></i>"
 	)
 );
 ?>
@@ -1433,8 +1433,8 @@ $listWord = array(
         <h3>Nuages</h3>
     </div>
     <div id="cloudController">
-        <button class="fontCloud">Typographies</button>
-        <button class="colorCloud">Évoluer Teintes</button>
+        <button class="fontCloud">Remplacer  Typographie</button>
+        <button class="colorCloud">Évoluer  Teintes</button>
     </div>
     <div id="cloudtag">
 
@@ -1495,7 +1495,7 @@ $listWord = array(
 </div>
 <div class="vc_col-sm-5">
     <div id="arrayCloud">
-        <h3>Recherche Google par mots-clés</h3>
+        <h3>Mots Clés - Ensembles - Recherche Google</h3>
         <hr>
         <div class="categories">
             <div class="left-categorie">
